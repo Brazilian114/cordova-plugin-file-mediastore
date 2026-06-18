@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-file-mediastore",
+  "version": "1.0.0",
+  "description": "Internal Cordova plugin for saving files through Android MediaStore and document picker.",
+  "cordova": {
+    "id": "cordova-plugin-file-mediastore",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "android",
+    "mediastore",
+    "file"
+  ],
+  "license": "Apache-2.0",
+  "private": true
+}

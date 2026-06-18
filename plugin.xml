@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-file-mediastore"
+        version="1.0.0">
+
+    <name>File MediaStore</name>
+    <description>Internal Cordova plugin for saving files through Android MediaStore and document picker.</description>
+    <license>Apache-2.0</license>
+
+    <engines>
+        <engine name="cordova" version=">=9.0.0" />
+    </engines>
+
+    <js-module src="www/FileMediastore.js" name="FileMediastore">
+        <clobbers target="cordova.plugins.fileMediastore" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="FileMediastore">
+                <param name="android-package" value="com.pttdigital.dhappy.mediastore.FileMediastore" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+        </config-file>
+
+        <source-file src="src/android/FileMediastore.java" target-dir="src/com/pttdigital/dhappy/mediastore" />
+    </platform>
+</plugin>
