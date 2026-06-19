@@ -39,7 +39,7 @@ public class FileMediastore extends CordovaPlugin {
         }
 
         if ("writeFile".equals(action)) {
-            writeFile(options, callbackContext);
+            saveFile(options, callbackContext);
             return true;
         }
 
