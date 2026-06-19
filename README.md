@@ -19,5 +19,5 @@ cordova.plugins.fileMediastore.saveFile({
 }, success, error);
 ```
 
-`writeFile` saves to the public Downloads collection on Android 10+ through MediaStore.
+`writeFile` opens the system document picker for compatibility with the previous SAF plugin behavior.
 `saveFile` opens the system document picker and writes to the URI selected by the user.
